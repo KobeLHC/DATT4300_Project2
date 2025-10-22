@@ -2,57 +2,77 @@ using UnityEngine;
 
 public class CarController : MonoBehaviour
 {
-    [Header("Movement Settings")]
-    public float maxMotorTorque = 500f;  // torque applied to wheels
-    public float maxSteerAngle = 30f;    // front wheel steering
-    public float maxSpeed = 20f;
+    [Header("References")]
+    public Transform carModel; // the visible car mesh
 
-    [Header("Wheels")]
-    public WheelCollider frontLeftWheel;
-    public WheelCollider frontRightWheel;
-    public WheelCollider rearLeftWheel;
-    public WheelCollider rearRightWheel;
-    public Transform[] wheelMeshes;      // optional: visual meshes
+    [Header("Car Settings")]
+    public float acceleration = 20f;
+    public float turnSpeed = 60f;
+    public float maxSpeed = 25f;
+    public float groundCheckDistance = 1.2f;
 
     private Rigidbody rb;
+    private float moveInput;
+    private float turnInput;
+    private bool grounded;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.centerOfMass = new Vector3(0, -0.5f, 0); // lowers center of mass for stability
+        rb.centerOfMass = new Vector3(0, -0.5f, 0); // stability
+    }
+
+    void Update()
+    {
+        moveInput = Input.GetAxis("Vertical");
+        turnInput = Input.GetAxis("Horizontal");
     }
 
     void FixedUpdate()
     {
-        float moveInput = Input.GetAxis("Vertical");
-        float steerInput = Input.GetAxis("Horizontal");
+        CheckGround();
 
-        // motor torque to rear wheels
-        rearLeftWheel.motorTorque = moveInput * maxMotorTorque;
-        rearRightWheel.motorTorque = moveInput * maxMotorTorque;
-
-        // sterring front wheels
-        frontLeftWheel.steerAngle = steerInput * maxSteerAngle;
-        frontRightWheel.steerAngle = steerInput * maxSteerAngle;
-
-        // max speed limit
-        Vector3 horizontalVel = new Vector3(rb.velocity.x, 0, rb.velocity.z);
-        if (horizontalVel.magnitude > maxSpeed)
+        if (grounded)
         {
-            horizontalVel = horizontalVel.normalized * maxSpeed;
-            rb.velocity = new Vector3(horizontalVel.x, rb.velocity.y, horizontalVel.z);
+            // forward/backward acceleration
+            Vector3 force = transform.forward * moveInput * acceleration;
+            rb.AddForce(force, ForceMode.Acceleration);
+
+            // realistic turning
+            float speedFactor = rb.velocity.magnitude / maxSpeed; // 0 to 1
+            float turn = turnInput * turnSpeed * Time.fixedDeltaTime;
+
+            // invert turn when moving backward
+            if (moveInput < 0f) turn = -turn;
+
+            // scale turn by speed for smoothness
+            turn *= Mathf.Lerp(0.5f, 1f, speedFactor);
+
+            rb.MoveRotation(rb.rotation * Quaternion.Euler(0f, turn, 0f));
+
+            // limit speed
+            Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+            if (flatVel.magnitude > maxSpeed)
+                rb.velocity = flatVel.normalized * maxSpeed + Vector3.up * rb.velocity.y;
+        }
+        else
+        {
+            // add downforce to help land faster
+            rb.AddForce(Vector3.down * 50f, ForceMode.Acceleration);
         }
 
-        // visuals
-        if (wheelMeshes != null && wheelMeshes.Length == 4)
+        // keep car model aligned with movement
+        if (carModel)
         {
-            WheelCollider[] wheels = { frontLeftWheel, frontRightWheel, rearLeftWheel, rearRightWheel };
-            for (int i = 0; i < 4; i++)
-            {
-                wheels[i].GetWorldPose(out Vector3 pos, out Quaternion rot);
-                wheelMeshes[i].position = pos;
-                wheelMeshes[i].rotation = rot;
-            }
+            Vector3 vel = rb.velocity;
+            if (vel.magnitude < 0.1f) vel = transform.forward;
+            Quaternion targetRot = Quaternion.LookRotation(vel.normalized, Vector3.up);
+            carModel.rotation = Quaternion.Slerp(carModel.rotation, targetRot, 10f * Time.deltaTime);
         }
+    }
+
+    void CheckGround()
+    {
+        grounded = Physics.Raycast(transform.position, Vector3.down, groundCheckDistance);
     }
 }
