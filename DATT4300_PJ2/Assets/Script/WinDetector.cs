@@ -96,6 +96,11 @@ public class WinDetector : MonoBehaviour
 
             if(lapCount > 2)
             {
+                if (SceneTransferData.instance != null)
+                {
+                    SceneTransferData.instance.SetBestTime(compareMin, compareSec, compareMilli);
+                }
+
                 SceneManager.LoadScene("Score");
             }
         }
