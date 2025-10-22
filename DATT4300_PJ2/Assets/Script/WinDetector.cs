@@ -11,6 +11,10 @@ public class WinDetector : MonoBehaviour
     public GameObject bestSecDisplay;
     public GameObject bestMilliDisplay;
 
+    public static int compareMin = 0;
+    public static int compareSec = 0;
+    public static float compareMilli = 0f;
+
     public int lapCount = 0;
     public GameObject lapCountDisplay;
 
@@ -43,24 +47,48 @@ public class WinDetector : MonoBehaviour
             lapCount += 1;
 
             //best time
-            if(LapTimeManager.secCount <= 9)
+
+            if(LapTimeManager.minCount < compareMin || compareMin == 0)
             {
-                bestSecDisplay.GetComponent<TextMeshProUGUI>().text = "0" + LapTimeManager.secCount + ".";
-            }
-            else
-            {
-                bestSecDisplay.GetComponent<TextMeshProUGUI>().text = "" + LapTimeManager.secCount + ".";
+                if (LapTimeManager.minCount <= 9)
+                {
+                    bestMinDisplay.GetComponent<TextMeshProUGUI>().text = "0" + LapTimeManager.minCount + ":";
+                }
+                else
+                {
+                    bestMinDisplay.GetComponent<TextMeshProUGUI>().text = "" + LapTimeManager.minCount + ":";
+                }
+
+                compareMin = LapTimeManager.minCount;
+                //compareSec = LapTimeManager.secCount;
+                //compareMilli = LapTimeManager.milliCount;
             }
 
-            if (LapTimeManager.minCount <= 9)
+            if(LapTimeManager.secCount < compareSec || compareSec == 0 && LapTimeManager.minCount == compareMin)
             {
-                bestMinDisplay.GetComponent<TextMeshProUGUI>().text = "0" + LapTimeManager.minCount + ":";
+                if (LapTimeManager.secCount <= 9)
+                {
+                    bestSecDisplay.GetComponent<TextMeshProUGUI>().text = "0" + LapTimeManager.secCount + ".";
+                }
+
+                else
+                {
+                    bestSecDisplay.GetComponent<TextMeshProUGUI>().text = "" + LapTimeManager.secCount + ".";
+                }
+
+                //compareMin = LapTimeManager.minCount;
+                compareSec = LapTimeManager.secCount;
+                //compareMilli = LapTimeManager.milliCount;
             }
-            else
+
+            if(LapTimeManager.milliCount< compareMilli || compareMilli == 0f || LapTimeManager.secCount == compareSec || LapTimeManager.minCount == compareMin)
             {
-                bestMinDisplay.GetComponent<TextMeshProUGUI>().text = "" + LapTimeManager.minCount + ":";
-            }
                 bestMilliDisplay.GetComponent<TextMeshProUGUI>().text = "" + ((int)LapTimeManager.milliCount);
+                //compareMin = LapTimeManager.minCount;
+                //compareSec = LapTimeManager.secCount;
+                compareMilli = LapTimeManager.milliCount;
+            }
+                
             
             LapTimeManager.minCount = 0;
             LapTimeManager.secCount = 0;
