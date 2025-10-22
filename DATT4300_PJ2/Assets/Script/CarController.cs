@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class CarController : MonoBehaviour
 {
     [Header("References")]
@@ -11,21 +12,37 @@ public class CarController : MonoBehaviour
     public float maxSpeed = 25f;
     public float groundCheckDistance = 1.2f;
 
+    [Header("Audio")]
+    public AudioClip engineIdleClip; // assign your idle sound here
+    public float idleSpeedThreshold = 0.1f; // speed considered “stopped”
+
     private Rigidbody rb;
     private float moveInput;
     private float turnInput;
     private bool grounded;
+    private AudioSource audioSource;
+
+       [Header("Explosion")]
+    public AudioSource explosionAudio; // assign an AudioSource in the inspector
+        public ParticleSystem explosionParticle; // assign your explosion particle prefab or child
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.centerOfMass = new Vector3(0, -0.5f, 0); // stability
+
+        audioSource = GetComponent<AudioSource>();
+        audioSource.loop = true; // loop the engine sound
+        audioSource.clip = engineIdleClip;
     }
 
     void Update()
     {
         moveInput = Input.GetAxis("Vertical");
         turnInput = Input.GetAxis("Horizontal");
+
+        HandleEngineAudio();
     }
 
     void FixedUpdate()
@@ -75,4 +92,44 @@ public class CarController : MonoBehaviour
     {
         grounded = Physics.Raycast(transform.position, Vector3.down, groundCheckDistance);
     }
+
+    void HandleEngineAudio()
+    {
+        Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+
+        if (flatVel.magnitude < idleSpeedThreshold)
+        {
+            if (!audioSource.isPlaying)
+                audioSource.Play(); // start idle sound
+        }
+        else
+        {
+            if (audioSource.isPlaying)
+                audioSource.Stop(); // stop idle when moving
+        }
+    }
+    void OnCollisionEnter(Collision collision)
+{
+  if (collision.gameObject.CompareTag("Building"))
+{
+    if (explosionParticle)
+        explosionParticle.Play();
+
+    if (explosionAudio)
+        explosionAudio.Play();
+
+           // hide the child called "Car"
+        Transform carChild = transform.Find("Car"); // find the child
+        if (carChild != null)
+            carChild.gameObject.SetActive(false);   // disable it
+              // Make the car immobile
+            if (rb != null)
+            {
+                rb.velocity = Vector3.zero;        // stop all motion
+                rb.angularVelocity = Vector3.zero; // stop rotation
+                rb.isKinematic = true;             // prevent physics from moving it
+            }
+    }
 }
+}
+

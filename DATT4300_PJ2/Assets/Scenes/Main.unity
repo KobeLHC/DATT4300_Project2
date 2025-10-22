@@ -1077,6 +1077,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building5 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5776386602928298276, guid: 85388c77b49da42d8b0bffb7448ab87c, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2008,6 +2012,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: -5678389440796794050, guid: 465932744efb04bf4b2e6719981d4034, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2286,6 +2294,16 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6732254031686098787, guid: 4087a6d8c0f3742d780a124c124c3405, type: 3}
   m_PrefabInstance: {fileID: 145626428}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &148830058 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8937988215714504725, guid: c746cba663bf22342aeabc9830f85e8f, type: 3}
+  m_PrefabInstance: {fileID: 2041760193}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &148830060 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8156182863411348164, guid: c746cba663bf22342aeabc9830f85e8f, type: 3}
+  m_PrefabInstance: {fileID: 2041760193}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &156632000
 PrefabInstance:
@@ -3299,6 +3317,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building3 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3293964100036876113, guid: e53c0c54506ce40d0840309f9968e8f1, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3505,6 +3527,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building8
       objectReference: {fileID: 0}
+    - target: {fileID: 5961099950502847837, guid: 9dd5735fb5b2549bd85b08159ab73e35, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3595,6 +3621,10 @@ PrefabInstance:
     - target: {fileID: -5678389440796794050, guid: 465932744efb04bf4b2e6719981d4034, type: 3}
       propertyPath: m_Name
       value: building2 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: -5678389440796794050, guid: 465932744efb04bf4b2e6719981d4034, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4486,6 +4516,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building7 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: -3556521037850783899, guid: 9083430f66858460eb1962bebc70d789, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     - target: {fileID: 3887958012717072141, guid: 9083430f66858460eb1962bebc70d789, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.896484
@@ -4827,6 +4861,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building5
       objectReference: {fileID: 0}
+    - target: {fileID: 5776386602928298276, guid: 85388c77b49da42d8b0bffb7448ab87c, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4917,6 +4955,10 @@ PrefabInstance:
     - target: {fileID: 5776386602928298276, guid: 85388c77b49da42d8b0bffb7448ab87c, type: 3}
       propertyPath: m_Name
       value: building5 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776386602928298276, guid: 85388c77b49da42d8b0bffb7448ab87c, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5021,6 +5063,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building8 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5961099950502847837, guid: 9dd5735fb5b2549bd85b08159ab73e35, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5100,7 +5146,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 366237198}
-  - component: {fileID: 366237199}
   m_Layer: 0
   m_Name: Roads
   m_TagString: Untagged
@@ -5182,28 +5227,6 @@ Transform:
   - {fileID: 1324068169}
   m_Father: {fileID: 1239254837}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &366237199
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 366237197}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1001 &367028600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5434,6 +5457,134 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 972457551}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &371357813
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 371357815}
+  - component: {fileID: 371357814}
+  m_Layer: 0
+  m_Name: Crash
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &371357814
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371357813}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b29ae8a56de0ebc46ac0a6cf96c79cd7, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &371357815
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371357813}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 25.188759, y: -3.2020903, z: 94.44303}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &371387343
 PrefabInstance:
@@ -6439,6 +6590,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8356837734711055288, guid: 77c8b1c2f780d48aca8133fa1947b2ae, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6458,6 +6613,10 @@ PrefabInstance:
     - target: {fileID: -3556521037850783899, guid: 9083430f66858460eb1962bebc70d789, type: 3}
       propertyPath: m_Name
       value: building7
+      objectReference: {fileID: 0}
+    - target: {fileID: -3556521037850783899, guid: 9083430f66858460eb1962bebc70d789, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: 3887958012717072141, guid: 9083430f66858460eb1962bebc70d789, type: 3}
       propertyPath: m_LocalScale.x
@@ -6791,6 +6950,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building6 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 622861151189628575, guid: 84191a32c26434428abb224b6f70875b, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6984,6 +7147,10 @@ PrefabInstance:
     - target: {fileID: -5678389440796794050, guid: 465932744efb04bf4b2e6719981d4034, type: 3}
       propertyPath: m_Name
       value: building2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: -5678389440796794050, guid: 465932744efb04bf4b2e6719981d4034, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7315,6 +7482,7 @@ GameObject:
   - component: {fileID: 501201420}
   - component: {fileID: 501201423}
   - component: {fileID: 501201424}
+  - component: {fileID: 501201425}
   m_Layer: 0
   m_Name: CarMain
   m_TagString: Untagged
@@ -7336,6 +7504,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4395670995900482742}
+  - {fileID: 148830060}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &501201420
@@ -7355,6 +7524,10 @@ MonoBehaviour:
   turnSpeed: 60
   maxSpeed: 20
   groundCheckDistance: 1.2
+  engineIdleClip: {fileID: 8300000, guid: 9af20adedd9d3134cb1f76117660ab1b, type: 3}
+  idleSpeedThreshold: 0.1
+  explosionAudio: {fileID: 371357814}
+  explosionParticle: {fileID: 148830058}
 --- !u!54 &501201421
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7424,6 +7597,102 @@ CapsuleCollider:
   m_Height: 3
   m_Direction: 2
   m_Center: {x: -0.1, y: 0.3, z: 0}
+--- !u!82 &501201425
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501201417}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &513062090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8792,6 +9061,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building8 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5961099950502847837, guid: 9dd5735fb5b2549bd85b08159ab73e35, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8997,6 +9270,10 @@ PrefabInstance:
     - target: {fileID: 8356837734711055288, guid: 77c8b1c2f780d48aca8133fa1947b2ae, type: 3}
       propertyPath: m_Name
       value: building1 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356837734711055288, guid: 77c8b1c2f780d48aca8133fa1947b2ae, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9206,6 +9483,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building5 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5776386602928298276, guid: 85388c77b49da42d8b0bffb7448ab87c, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9308,6 +9589,10 @@ PrefabInstance:
     - target: {fileID: 7184567633912913576, guid: 79892ef883cf04f86adab53af0ddcf9f, type: 3}
       propertyPath: m_Name
       value: building4 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7184567633912913576, guid: 79892ef883cf04f86adab53af0ddcf9f, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9851,6 +10136,10 @@ PrefabInstance:
     - target: {fileID: 3293964100036876113, guid: e53c0c54506ce40d0840309f9968e8f1, type: 3}
       propertyPath: m_Name
       value: building3 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293964100036876113, guid: e53c0c54506ce40d0840309f9968e8f1, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10460,6 +10749,10 @@ PrefabInstance:
     - target: {fileID: 622861151189628575, guid: 84191a32c26434428abb224b6f70875b, type: 3}
       propertyPath: m_Name
       value: building6
+      objectReference: {fileID: 0}
+    - target: {fileID: 622861151189628575, guid: 84191a32c26434428abb224b6f70875b, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11566,6 +11859,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building6 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 622861151189628575, guid: 84191a32c26434428abb224b6f70875b, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11949,6 +12246,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building8 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5961099950502847837, guid: 9dd5735fb5b2549bd85b08159ab73e35, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12155,6 +12456,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building4
       objectReference: {fileID: 0}
+    - target: {fileID: 7184567633912913576, guid: 79892ef883cf04f86adab53af0ddcf9f, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12257,6 +12562,10 @@ PrefabInstance:
     - target: {fileID: 8356837734711055288, guid: 77c8b1c2f780d48aca8133fa1947b2ae, type: 3}
       propertyPath: m_Name
       value: building1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356837734711055288, guid: 77c8b1c2f780d48aca8133fa1947b2ae, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13736,6 +14045,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building2
       objectReference: {fileID: 0}
+    - target: {fileID: -5678389440796794050, guid: 465932744efb04bf4b2e6719981d4034, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13826,6 +14139,10 @@ PrefabInstance:
     - target: {fileID: 5776386602928298276, guid: 85388c77b49da42d8b0bffb7448ab87c, type: 3}
       propertyPath: m_Name
       value: building5 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776386602928298276, guid: 85388c77b49da42d8b0bffb7448ab87c, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13929,6 +14246,10 @@ PrefabInstance:
     - target: {fileID: 7184567633912913576, guid: 79892ef883cf04f86adab53af0ddcf9f, type: 3}
       propertyPath: m_Name
       value: building4 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7184567633912913576, guid: 79892ef883cf04f86adab53af0ddcf9f, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14388,6 +14709,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: -5678389440796794050, guid: 465932744efb04bf4b2e6719981d4034, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14616,6 +14941,10 @@ PrefabInstance:
     - target: {fileID: -3556521037850783899, guid: 9083430f66858460eb1962bebc70d789, type: 3}
       propertyPath: m_Name
       value: building7 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: -3556521037850783899, guid: 9083430f66858460eb1962bebc70d789, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: 3887958012717072141, guid: 9083430f66858460eb1962bebc70d789, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15010,6 +15339,10 @@ PrefabInstance:
     - target: {fileID: 5776386602928298276, guid: 85388c77b49da42d8b0bffb7448ab87c, type: 3}
       propertyPath: m_Name
       value: building5 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776386602928298276, guid: 85388c77b49da42d8b0bffb7448ab87c, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15455,6 +15788,10 @@ PrefabInstance:
     - target: {fileID: -5678389440796794050, guid: 465932744efb04bf4b2e6719981d4034, type: 3}
       propertyPath: m_Name
       value: building2 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: -5678389440796794050, guid: 465932744efb04bf4b2e6719981d4034, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16071,6 +16408,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building6 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 622861151189628575, guid: 84191a32c26434428abb224b6f70875b, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16173,6 +16514,10 @@ PrefabInstance:
     - target: {fileID: 7184567633912913576, guid: 79892ef883cf04f86adab53af0ddcf9f, type: 3}
       propertyPath: m_Name
       value: building4 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7184567633912913576, guid: 79892ef883cf04f86adab53af0ddcf9f, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17026,6 +17371,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building1 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8356837734711055288, guid: 77c8b1c2f780d48aca8133fa1947b2ae, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17128,6 +17477,10 @@ PrefabInstance:
     - target: {fileID: 3293964100036876113, guid: e53c0c54506ce40d0840309f9968e8f1, type: 3}
       propertyPath: m_Name
       value: building3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293964100036876113, guid: e53c0c54506ce40d0840309f9968e8f1, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17961,6 +18314,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building6 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 622861151189628575, guid: 84191a32c26434428abb224b6f70875b, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18751,6 +19108,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building6 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 622861151189628575, guid: 84191a32c26434428abb224b6f70875b, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18822,6 +19183,10 @@ PrefabInstance:
     - target: {fileID: 3293964100036876113, guid: e53c0c54506ce40d0840309f9968e8f1, type: 3}
       propertyPath: m_Name
       value: building3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293964100036876113, guid: e53c0c54506ce40d0840309f9968e8f1, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19266,6 +19631,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8356837734711055288, guid: 77c8b1c2f780d48aca8133fa1947b2ae, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19574,6 +19943,10 @@ PrefabInstance:
     - target: {fileID: 622861151189628575, guid: 84191a32c26434428abb224b6f70875b, type: 3}
       propertyPath: m_Name
       value: building6 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 622861151189628575, guid: 84191a32c26434428abb224b6f70875b, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19960,6 +20333,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8356837734711055288, guid: 77c8b1c2f780d48aca8133fa1947b2ae, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20344,6 +20721,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building6 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 622861151189628575, guid: 84191a32c26434428abb224b6f70875b, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20653,6 +21034,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building5 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5776386602928298276, guid: 85388c77b49da42d8b0bffb7448ab87c, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20932,6 +21317,10 @@ PrefabInstance:
     - target: {fileID: 3293964100036876113, guid: e53c0c54506ce40d0840309f9968e8f1, type: 3}
       propertyPath: m_Name
       value: building3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293964100036876113, guid: e53c0c54506ce40d0840309f9968e8f1, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21540,6 +21929,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building7 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: -3556521037850783899, guid: 9083430f66858460eb1962bebc70d789, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     - target: {fileID: 3887958012717072141, guid: 9083430f66858460eb1962bebc70d789, type: 3}
       propertyPath: m_LocalScale.x
       value: 10.260475
@@ -21982,6 +22375,10 @@ PrefabInstance:
     - target: {fileID: -3556521037850783899, guid: 9083430f66858460eb1962bebc70d789, type: 3}
       propertyPath: m_Name
       value: building7 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: -3556521037850783899, guid: 9083430f66858460eb1962bebc70d789, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: 3887958012717072141, guid: 9083430f66858460eb1962bebc70d789, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22436,6 +22833,10 @@ PrefabInstance:
     - target: {fileID: 622861151189628575, guid: 84191a32c26434428abb224b6f70875b, type: 3}
       propertyPath: m_Name
       value: building6 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 622861151189628575, guid: 84191a32c26434428abb224b6f70875b, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23860,6 +24261,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building1
       objectReference: {fileID: 0}
+    - target: {fileID: 8356837734711055288, guid: 77c8b1c2f780d48aca8133fa1947b2ae, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24065,6 +24470,10 @@ PrefabInstance:
     - target: {fileID: 5776386602928298276, guid: 85388c77b49da42d8b0bffb7448ab87c, type: 3}
       propertyPath: m_Name
       value: building5 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776386602928298276, guid: 85388c77b49da42d8b0bffb7448ab87c, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25029,6 +25438,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building7 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: -3556521037850783899, guid: 9083430f66858460eb1962bebc70d789, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     - target: {fileID: 3887958012717072141, guid: 9083430f66858460eb1962bebc70d789, type: 3}
       propertyPath: m_LocalScale.x
       value: 9.260475
@@ -25685,6 +26098,75 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1.5645499}
   m_Center: {x: -0.001310885, y: -0.0017666817, z: -0.0017693043}
+--- !u!1001 &2041760193
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 501201419}
+    m_Modifications:
+    - target: {fileID: 8156182863411348164, guid: c746cba663bf22342aeabc9830f85e8f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.108
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156182863411348164, guid: c746cba663bf22342aeabc9830f85e8f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156182863411348164, guid: c746cba663bf22342aeabc9830f85e8f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.004
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156182863411348164, guid: c746cba663bf22342aeabc9830f85e8f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156182863411348164, guid: c746cba663bf22342aeabc9830f85e8f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156182863411348164, guid: c746cba663bf22342aeabc9830f85e8f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156182863411348164, guid: c746cba663bf22342aeabc9830f85e8f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156182863411348164, guid: c746cba663bf22342aeabc9830f85e8f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156182863411348164, guid: c746cba663bf22342aeabc9830f85e8f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156182863411348164, guid: c746cba663bf22342aeabc9830f85e8f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937988215714504725, guid: c746cba663bf22342aeabc9830f85e8f, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937988215714504725, guid: c746cba663bf22342aeabc9830f85e8f, type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937988215714504725, guid: c746cba663bf22342aeabc9830f85e8f, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9073381991203484570, guid: c746cba663bf22342aeabc9830f85e8f, type: 3}
+      propertyPath: m_Name
+      value: Explosion
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c746cba663bf22342aeabc9830f85e8f, type: 3}
 --- !u!1001 &2051356871
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25986,6 +26468,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8356837734711055288, guid: 77c8b1c2f780d48aca8133fa1947b2ae, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26204,6 +26690,134 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -2367751295155817500, guid: 9dd5735fb5b2549bd85b08159ab73e35, type: 3}
   m_PrefabInstance: {fileID: 244768037}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2141692659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2141692661}
+  - component: {fileID: 2141692660}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &2141692660
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141692659}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b27da07a141aefe4bab20afa3d3ce2f9, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &2141692661
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141692659}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 24.631907, y: 3.542744, z: 63.770058}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2141799751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26483,3 +27097,5 @@ SceneRoots:
   - {fileID: 843664666}
   - {fileID: 972457551}
   - {fileID: 298931336}
+  - {fileID: 2141692661}
+  - {fileID: 371357815}
