@@ -4,11 +4,9 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-
 [RequireComponent(typeof(AudioSource))]
 public class CarController : MonoBehaviour
 {
-
     [Header("References")]
     public Transform carModel; // the visible car mesh
 
@@ -22,52 +20,63 @@ public class CarController : MonoBehaviour
     public float groundCheckDistance = 1.2f;
 
     [Header("Audio")]
-    public AudioClip engineIdleClip; //  idle sound here
+    public AudioClip engineIdleClip; // idle sound
     public AudioClip accelerationClip;  // revving
-    public float pitchRange = 1.5f;     // how much pitch changes
-    public float volumeRange = 0.5f;    // how much volume changes
+    public float pitchRange = 1.5f;     // max pitch
+    public float volumeRange = 0.5f;    // max volume
 
-    public float idleSpeedThreshold = 0.1f; // speed considered “stopped”
+    public float idleSpeedThreshold = 0.1f; // considered stopped
 
     private Rigidbody rb;
     private float moveInput;
     private float turnInput;
     private bool grounded;
     private AudioSource audioSource;
-       private bool isAccelerating;
 
-
-       [Header("Explosion")]
-    public AudioSource explosionAudio; 
-        public ParticleSystem explosionParticle; 
+    [Header("Explosion")]
+    public AudioSource explosionAudio;
+    public ParticleSystem explosionParticle;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.centerOfMass = new Vector3(0, -0.5f, 0); // stability
+        rb.centerOfMass = new Vector3(0, -0.5f, 0);
 
         audioSource = GetComponent<AudioSource>();
-        audioSource.loop = true; // loop the engine sound
+        audioSource.loop = true;
         audioSource.clip = engineIdleClip;
+        audioSource.Play();
     }
 
     void Update()
     {
-        moveInput = Input.GetAxis("Vertical");
-        turnInput = Input.GetAxis("Horizontal");
+        // Forward / backward
+        if (Input.GetKey(KeyCode.W))
+            moveInput = 1f;
+        else if (Input.GetKey(KeyCode.K))
+            moveInput = -1f;
+        else
+            moveInput = 0f;
+
+        // Turn left / right
+        if (Input.GetKey(KeyCode.A))
+            turnInput = -1f;
+        else if (Input.GetKey(KeyCode.L))
+            turnInput = 1f;
+        else
+            turnInput = 0f;
 
         HandleEngineAudio();
         UpdateSpeedometer();
-
     }
 
-        void UpdateSpeedometer()
+    void UpdateSpeedometer()
     {
         if (kphText == null) return;
 
         Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
         float speed = flatVel.magnitude * 3.6f;
-       kphText.text = Mathf.RoundToInt(speed).ToString();;
+        kphText.text = Mathf.RoundToInt(speed).ToString();
     }
 
     void FixedUpdate()
@@ -76,34 +85,31 @@ public class CarController : MonoBehaviour
 
         if (grounded)
         {
-            // forward/backward acceleration
+            // Acceleration
             Vector3 force = transform.forward * moveInput * acceleration;
             rb.AddForce(force, ForceMode.Acceleration);
 
-            // realistic turning
-            float speedFactor = rb.velocity.magnitude / maxSpeed; // 0 to 1
+            // Turning
+            float speedFactor = rb.velocity.magnitude / maxSpeed;
             float turn = turnInput * turnSpeed * Time.fixedDeltaTime;
 
-            // invert turn when moving backward
-            if (moveInput < 0f) turn = -turn;
-
-            // scale turn by speed for smoothness
+            if (moveInput < 0f) turn = -turn; // invert turn when going backward
             turn *= Mathf.Lerp(0.5f, 1f, speedFactor);
 
             rb.MoveRotation(rb.rotation * Quaternion.Euler(0f, turn, 0f));
 
-            // limit speed
+            // Limit max speed
             Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
             if (flatVel.magnitude > maxSpeed)
                 rb.velocity = flatVel.normalized * maxSpeed + Vector3.up * rb.velocity.y;
         }
         else
         {
-            // add downforce to help land faster
+            // Downforce
             rb.AddForce(Vector3.down * 50f, ForceMode.Acceleration);
         }
 
-        // keep car model aligned with movement
+        // Align car model with movement
         if (carModel)
         {
             Vector3 vel = rb.velocity;
@@ -118,74 +124,61 @@ public class CarController : MonoBehaviour
         grounded = Physics.Raycast(transform.position, Vector3.down, groundCheckDistance);
     }
 
-void HandleEngineAudio()
-{
-    // get flat velocity (ignore vertical)
-    Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-    float speed = flatVel.magnitude;
-
-    // normalize speed 0–1 for pitch scaling
-    float speedPercent = Mathf.Clamp01(speed / maxSpeed);
-
-    // idle sound when stopped
-    if (speed < idleSpeedThreshold)
+    void HandleEngineAudio()
     {
-        if (audioSource.clip != engineIdleClip)
-        {
-            audioSource.clip = engineIdleClip;
-            audioSource.loop = true;
-            audioSource.Play();
-        }
-        audioSource.pitch = 1f; // idle pitch
-    }
-    // acceleration sound when moving
-    else
-    {
-        if (audioSource.clip != accelerationClip)
-        {
-            audioSource.clip = accelerationClip;
-            audioSource.loop = true;
-            audioSource.Play();
-        }
-        // pitch scales with speed (1.0 at stop → pitchRange at max speed)
-        audioSource.pitch = Mathf.Lerp(1f, pitchRange, speedPercent);
-    }
-}
+        Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+        float speed = flatVel.magnitude;
+        float speedPercent = Mathf.Clamp01(speed / maxSpeed);
 
+        // Idle sound
+        if (speed < idleSpeedThreshold)
+        {
+            if (audioSource.clip != engineIdleClip)
+            {
+                audioSource.clip = engineIdleClip;
+                audioSource.loop = true;
+                audioSource.Play();
+            }
+            audioSource.pitch = 1f;
+        }
+        else // Acceleration sound
+        {
+            if (audioSource.clip != accelerationClip)
+            {
+                audioSource.clip = accelerationClip;
+                audioSource.loop = true;
+                audioSource.Play();
+            }
+            audioSource.pitch = Mathf.Lerp(1f, pitchRange, speedPercent);
+        }
+    }
 
     void OnCollisionEnter(Collision collision)
-{
-  if (collision.gameObject.CompareTag("Building"))
-  {
+    {
+        if (collision.gameObject.CompareTag("Building"))
+        {
             StartCoroutine(crashCountDown());
 
-    if (explosionParticle)
-        explosionParticle.Play();
+            if (explosionParticle) explosionParticle.Play();
+            if (explosionAudio) explosionAudio.Play();
 
-    if (explosionAudio)
-        explosionAudio.Play();
+            // Hide car mesh
+            Transform carChild = transform.Find("Car");
+            if (carChild != null) carChild.gameObject.SetActive(false);
 
-           // hide the child called "Car"
-        Transform carChild = transform.Find("Car"); // find the child
-        if (carChild != null)
-            carChild.gameObject.SetActive(false);   // disable it
-              // Make the car immobile
+            // Make car immobile
             if (rb != null)
             {
-                rb.velocity = Vector3.zero;        // stop all motion
-                rb.angularVelocity = Vector3.zero; // stop rotation
-                rb.isKinematic = true;             // prevent physics from moving it
+                rb.velocity = Vector3.zero;
+                rb.angularVelocity = Vector3.zero;
+                rb.isKinematic = true;
             }
+        }
     }
-    
-}
-
 
     IEnumerator crashCountDown()
     {
         yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene("Start");
     }
-
 }
-
