@@ -14,7 +14,12 @@ public class LapTimeManager : MonoBehaviour
     public GameObject secBox;
     public GameObject milliBox;
 
-    
+    private void Start()
+    {
+        minCount = 0;
+        secCount = 0;
+        milliCount = 0f;
+    }
 
     void Update()
     {
