@@ -33,6 +33,9 @@ public class CarController : MonoBehaviour
     private bool grounded;
     private AudioSource audioSource;
 
+    [Header("Text")]
+    public GameObject loseText;
+
     [Header("Explosion")]
     public AudioSource explosionAudio;
     public ParticleSystem explosionParticle;
@@ -46,6 +49,7 @@ public class CarController : MonoBehaviour
         audioSource.loop = true;
         audioSource.clip = engineIdleClip;
         audioSource.Play();
+        loseText.SetActive(false);
     }
 
     void Update()
@@ -161,6 +165,7 @@ public class CarController : MonoBehaviour
 
             if (explosionParticle) explosionParticle.Play();
             if (explosionAudio) explosionAudio.Play();
+            loseText.SetActive(true);
 
             // Hide car mesh
             Transform carChild = transform.Find("Car");
@@ -179,6 +184,7 @@ public class CarController : MonoBehaviour
     IEnumerator crashCountDown()
     {
         yield return new WaitForSeconds(1.5f);
+        loseText.SetActive(false);
         SceneManager.LoadScene("Start");
     }
 }
