@@ -19,7 +19,11 @@ public class CarController : MonoBehaviour
     public float groundCheckDistance = 1.2f;
 
     [Header("Audio")]
-    public AudioClip engineIdleClip; // assign your idle sound here
+    public AudioClip engineIdleClip; //  idle sound here
+    public AudioClip accelerationClip;  // revving
+    public float pitchRange = 1.5f;     // how much pitch changes
+    public float volumeRange = 0.5f;    // how much volume changes
+
     public float idleSpeedThreshold = 0.1f; // speed considered “stopped”
 
     private Rigidbody rb;
@@ -27,11 +31,12 @@ public class CarController : MonoBehaviour
     private float turnInput;
     private bool grounded;
     private AudioSource audioSource;
+       private bool isAccelerating;
+
 
        [Header("Explosion")]
-    public AudioSource explosionAudio; // assign an AudioSource in the inspector
-        public ParticleSystem explosionParticle; // assign your explosion particle prefab or child
-
+    public AudioSource explosionAudio; 
+        public ParticleSystem explosionParticle; 
 
     void Start()
     {
@@ -110,21 +115,41 @@ public class CarController : MonoBehaviour
         grounded = Physics.Raycast(transform.position, Vector3.down, groundCheckDistance);
     }
 
-    void HandleEngineAudio()
-    {
-        Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+void HandleEngineAudio()
+{
+    // get flat velocity (ignore vertical)
+    Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+    float speed = flatVel.magnitude;
 
-        if (flatVel.magnitude < idleSpeedThreshold)
+    // normalize speed 0–1 for pitch scaling
+    float speedPercent = Mathf.Clamp01(speed / maxSpeed);
+
+    // idle sound when stopped
+    if (speed < idleSpeedThreshold)
+    {
+        if (audioSource.clip != engineIdleClip)
         {
-            if (!audioSource.isPlaying)
-                audioSource.Play(); // start idle sound
+            audioSource.clip = engineIdleClip;
+            audioSource.loop = true;
+            audioSource.Play();
         }
-        else
-        {
-            if (audioSource.isPlaying)
-                audioSource.Stop(); // stop idle when moving
-        }
+        audioSource.pitch = 1f; // idle pitch
     }
+    // acceleration sound when moving
+    else
+    {
+        if (audioSource.clip != accelerationClip)
+        {
+            audioSource.clip = accelerationClip;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
+        // pitch scales with speed (1.0 at stop → pitchRange at max speed)
+        audioSource.pitch = Mathf.Lerp(1f, pitchRange, speedPercent);
+    }
+}
+
+
     void OnCollisionEnter(Collision collision)
 {
   if (collision.gameObject.CompareTag("Building"))
@@ -147,6 +172,7 @@ public class CarController : MonoBehaviour
                 rb.isKinematic = true;             // prevent physics from moving it
             }
     }
+    
 
 
 }

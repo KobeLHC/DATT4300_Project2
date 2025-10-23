@@ -1232,6 +1232,113 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6732254031686098787, guid: 4087a6d8c0f3742d780a124c124c3405, type: 3}
   m_PrefabInstance: {fileID: 57927289}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &60375767
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 683710925}
+    m_Modifications:
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_Name
+      value: Flower_Bed1 (56)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
+    - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12.620001
+      objectReference: {fileID: 0}
+    - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 17.0371
+      objectReference: {fileID: 0}
+    - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 65.21369
+      objectReference: {fileID: 0}
+    - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 60375770}
+  m_SourcePrefab: {fileID: -4161369568681901532, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+--- !u!4 &60375768 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+  m_PrefabInstance: {fileID: 60375767}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &60375769 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+  m_PrefabInstance: {fileID: 60375767}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &60375770
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60375769}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.02958, y: 0.099760056, z: 1}
+  m_Center: {x: 0, y: -0.000052452087, z: 0.0058708303}
 --- !u!1001 &68093709
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1243,6 +1350,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -1680,6 +1791,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_Bed1 (35)
       objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
       value: 30
@@ -1782,6 +1897,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (51)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -2472,6 +2591,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8624331482622724252, guid: 25d72f83e01844a9f8dc83f46b001fba, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2522,6 +2645,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -2803,6 +2930,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_Bed1 (25)
       objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
       value: 30
@@ -3013,6 +3144,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (52)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -3818,6 +3953,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_Bed1 (50)
       objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
       value: 35
@@ -4045,6 +4184,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree3 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7788743992580607936, guid: 85eb1d056872345fd875cf9792217529, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4064,6 +4207,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -4242,6 +4389,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_Bed1 (29)
       objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
       value: 30
@@ -4344,6 +4495,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -4736,6 +4891,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -5291,6 +5450,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree3 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7788743992580607936, guid: 85eb1d056872345fd875cf9792217529, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5701,6 +5864,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_Bed1 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
       value: 30
@@ -5803,6 +5970,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -6433,6 +6604,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_Bed1 (28)
       objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
       value: 30
@@ -6974,6 +7149,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_Bed1 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
       value: 30
@@ -7171,6 +7350,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -7430,6 +7613,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree3 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7788743992580607936, guid: 85eb1d056872345fd875cf9792217529, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7521,11 +7708,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carModel: {fileID: 0}
   kphText: {fileID: 2109212172}
-  acceleration: 30
+  acceleration: 20
   turnSpeed: 80
-  maxSpeed: 50
+  maxSpeed: 30
   groundCheckDistance: 1.2
   engineIdleClip: {fileID: 8300000, guid: 9af20adedd9d3134cb1f76117660ab1b, type: 3}
+  accelerationClip: {fileID: 8300000, guid: 24945511c7e5df34eb440b73b47b7b9b, type: 3}
+  pitchRange: 1.5
+  volumeRange: 0.5
   idleSpeedThreshold: 0.1
   explosionAudio: {fileID: 371357814}
   explosionParticle: {fileID: 148830058}
@@ -7706,6 +7896,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_Bed1 (34)
       objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
       value: 30
@@ -7779,6 +7973,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -8128,6 +8326,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -8770,6 +8972,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree2
       objectReference: {fileID: 0}
+    - target: {fileID: 4187694491620208734, guid: 5c8707244ff5845aea0281d1afe68112, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8789,6 +8995,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -9698,6 +9908,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_Bed2
       objectReference: {fileID: 0}
+    - target: {fileID: 1446542616612545643, guid: fffe1070d5a1c47cd9db2bcb5b748f52, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9902,7 +10116,9 @@ Transform:
   - {fileID: 233087385}
   - {fileID: 680185090}
   - {fileID: 1845630862}
+  - {fileID: 966464277}
   - {fileID: 1310875839}
+  - {fileID: 60375768}
   - {fileID: 1381950139}
   - {fileID: 1203778006}
   - {fileID: 565192218}
@@ -9982,6 +10198,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -10192,6 +10412,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -10545,6 +10769,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8624331482622724252, guid: 25d72f83e01844a9f8dc83f46b001fba, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10805,6 +11033,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -11426,6 +11658,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8624331482622724252, guid: 25d72f83e01844a9f8dc83f46b001fba, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11626,6 +11862,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -11989,6 +12229,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_Bed1 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
       value: 30
@@ -12301,6 +12545,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (54)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -12702,6 +12950,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree3 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7788743992580607936, guid: 85eb1d056872345fd875cf9792217529, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12933,6 +13185,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -13417,6 +13673,113 @@ MonoBehaviour:
   followSpeed: 5
   rotationSpeed: 5
   forwardTilt: 10
+--- !u!1001 &966464276
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 683710925}
+    m_Modifications:
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_Name
+      value: Flower_Bed1 (55)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
+    - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.000004
+      objectReference: {fileID: 0}
+    - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 17.0371
+      objectReference: {fileID: 0}
+    - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 90.34
+      objectReference: {fileID: 0}
+    - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 270
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 966464279}
+  m_SourcePrefab: {fileID: -4161369568681901532, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+--- !u!4 &966464277 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+  m_PrefabInstance: {fileID: 966464276}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &966464278 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+  m_PrefabInstance: {fileID: 966464276}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &966464279
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966464278}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.02958, y: 0.5, z: 1}
+  m_Center: {x: 0, y: -0.00005221367, z: 0.0058708303}
 --- !u!1001 &971684079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13428,6 +13791,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (49)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -13709,6 +14076,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree1 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8624331482622724252, guid: 25d72f83e01844a9f8dc83f46b001fba, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13902,6 +14273,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -14567,6 +14942,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_Bed1 (32)
       objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
       value: 30
@@ -14922,6 +15301,10 @@ PrefabInstance:
     - target: {fileID: 7788743992580607936, guid: 85eb1d056872345fd875cf9792217529, type: 3}
       propertyPath: m_Name
       value: Tree3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788743992580607936, guid: 85eb1d056872345fd875cf9792217529, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15417,6 +15800,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree3 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 7788743992580607936, guid: 85eb1d056872345fd875cf9792217529, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15541,6 +15928,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -16540,6 +16931,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_Bed1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
       value: 30
@@ -16968,6 +17363,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_Bed1 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
       value: 30
@@ -17071,6 +17470,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_Bed1 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
       value: 30
@@ -17173,6 +17576,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -17658,6 +18065,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree1 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8624331482622724252, guid: 25d72f83e01844a9f8dc83f46b001fba, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18057,6 +18468,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_Bed1 (45)
       objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
       value: 30
@@ -18159,6 +18574,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -18556,6 +18975,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4187694491620208734, guid: 5c8707244ff5845aea0281d1afe68112, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18678,6 +19101,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -19292,6 +19719,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree3 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 7788743992580607936, guid: 85eb1d056872345fd875cf9792217529, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19342,6 +19773,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -21091,6 +21526,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_Bed1 (46)
       objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
       value: 30
@@ -21344,6 +21783,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_Bed1 (48)
       objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
       value: 35
@@ -21499,6 +21942,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8624331482622724252, guid: 25d72f83e01844a9f8dc83f46b001fba, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21621,6 +22068,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -21827,6 +22278,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -22038,6 +22493,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_Bed1 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
       value: 30
@@ -22140,6 +22599,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -22733,6 +23196,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree1
       objectReference: {fileID: 0}
+    - target: {fileID: 8624331482622724252, guid: 25d72f83e01844a9f8dc83f46b001fba, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22895,6 +23362,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -23785,6 +24256,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree3
       objectReference: {fileID: 0}
+    - target: {fileID: 7788743992580607936, guid: 85eb1d056872345fd875cf9792217529, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24172,6 +24647,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree3 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7788743992580607936, guid: 85eb1d056872345fd875cf9792217529, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24348,6 +24827,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -24703,6 +25186,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_Bed1 (37)
       objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
       value: 30
@@ -24776,6 +25263,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -24879,6 +25370,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -25729,6 +26224,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_Bed1
       objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
       value: 30
@@ -25852,6 +26351,10 @@ PrefabInstance:
     - target: {fileID: 7788743992580607936, guid: 85eb1d056872345fd875cf9792217529, type: 3}
       propertyPath: m_Name
       value: Tree3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788743992580607936, guid: 85eb1d056872345fd875cf9792217529, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26181,6 +26684,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_Bed1 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
       value: 30
@@ -26366,6 +26873,10 @@ PrefabInstance:
     - target: {fileID: 8624331482622724252, guid: 25d72f83e01844a9f8dc83f46b001fba, type: 3}
       propertyPath: m_Name
       value: Tree1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8624331482622724252, guid: 25d72f83e01844a9f8dc83f46b001fba, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26627,6 +27138,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -27039,6 +27554,10 @@ PrefabInstance:
     - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_Name
       value: Flower_Bed1 (47)
+      objectReference: {fileID: 0}
+    - target: {fileID: -6597960142680323745, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: -2983300468295166979, guid: fe43d9f7e47c94399adeae7f124f40e3, type: 3}
       propertyPath: m_LocalScale.x
