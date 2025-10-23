@@ -1,10 +1,16 @@
 using UnityEngine;
+using TMPro;
+
 
 [RequireComponent(typeof(AudioSource))]
 public class CarController : MonoBehaviour
 {
+
     [Header("References")]
     public Transform carModel; // the visible car mesh
+
+    [Header("UI")]
+    public TextMeshProUGUI kphText;
 
     [Header("Car Settings")]
     public float acceleration = 20f;
@@ -43,6 +49,17 @@ public class CarController : MonoBehaviour
         turnInput = Input.GetAxis("Horizontal");
 
         HandleEngineAudio();
+        UpdateSpeedometer();
+
+    }
+
+        void UpdateSpeedometer()
+    {
+        if (kphText == null) return;
+
+        Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+        float speed = flatVel.magnitude * 3.6f;
+       kphText.text = Mathf.RoundToInt(speed).ToString();;
     }
 
     void FixedUpdate()
@@ -130,6 +147,8 @@ public class CarController : MonoBehaviour
                 rb.isKinematic = true;             // prevent physics from moving it
             }
     }
+
+
 }
 }
 

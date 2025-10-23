@@ -9,6 +9,9 @@ public class CountDown : MonoBehaviour
     public GameObject lapTimer;
     public GameObject car;
 
+        private Rigidbody rb;
+
+
     public AudioSource countSfx;
     public AudioSource goSfx;
 
@@ -16,6 +19,10 @@ public class CountDown : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+         rb = car.GetComponent<Rigidbody>();
+        rb.isKinematic = true;
+
+
         StartCoroutine(countStart());
     }
 
@@ -46,6 +53,9 @@ public class CountDown : MonoBehaviour
 
         goSfx.Play();
         lapTimer.SetActive(true);
-        car.GetComponent<CarController>().enabled = true;
+                rb.isKinematic = false;
+
+
+
     }
 }
