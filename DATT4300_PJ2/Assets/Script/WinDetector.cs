@@ -26,7 +26,7 @@ public class WinDetector : MonoBehaviour
 
     private void Update()
     {
-        lapCountDisplay.GetComponent<TextMeshProUGUI>().text = lapCount + "/2";
+        lapCountDisplay.GetComponent<TextMeshProUGUI>().text = lapCount + "/1";
     }
 
 
@@ -94,7 +94,7 @@ public class WinDetector : MonoBehaviour
             LapTimeManager.secCount = 0;
             LapTimeManager.milliCount = 0;
 
-            if(lapCount > 2)
+            if(lapCount > 1)
             {
                 if (SceneTransferData.instance != null)
                 {

@@ -1,5 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 [RequireComponent(typeof(AudioSource))]
@@ -153,7 +156,9 @@ void HandleEngineAudio()
     void OnCollisionEnter(Collision collision)
 {
   if (collision.gameObject.CompareTag("Building"))
-{
+  {
+            StartCoroutine(crashCountDown());
+
     if (explosionParticle)
         explosionParticle.Play();
 
@@ -173,8 +178,14 @@ void HandleEngineAudio()
             }
     }
     
-
-
 }
+
+
+    IEnumerator crashCountDown()
+    {
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene("Start");
+    }
+
 }
 
