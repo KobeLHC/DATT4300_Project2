@@ -44,15 +44,38 @@ public class HighScoreTable : MonoBehaviour
         DisplayScores();
 
     }
+
+    private void Start()
+    {
+        ExportBestScore();
+    }
+
     private void Update()
     {
         // 🔹 Press 'R' to reset leaderboard
         if (Input.GetKeyDown(KeyCode.R))
         {
             ResetScores();
+            //PlayerPrefs.SetInt("BestMin", 0);
+            //PlayerPrefs.SetInt("BestSec", 0);
+            //PlayerPrefs.SetFloat("BestMilli", 0);
             DisplayScores();
             Debug.Log("Leaderboard has been reset to default!");
         }
+    }
+
+    private void ExportBestScore()
+    {
+        if (highScores.Count == 0 || SceneTransferData.instance == null) return;
+
+        var best = GetBestScore();
+
+        SceneTransferData.instance.SetBestRecord(best.min, best.sec, best.milli);
+
+        PlayerPrefs.SetInt("BestMin", best.min);
+        PlayerPrefs.SetInt("BestSec", best.sec);
+        PlayerPrefs.SetFloat("BestMilli", best.milli);
+        PlayerPrefs.Save();
     }
 
     private void SaveScores()
@@ -127,6 +150,19 @@ public class HighScoreTable : MonoBehaviour
         }
 
         SaveScores();
+
+        if (SceneTransferData.instance != null)
+        {
+            SceneTransferData.instance.scoreBestMin = 0;
+            SceneTransferData.instance.scoreBestSec = 0;
+            SceneTransferData.instance.scoreBestMilli = 0f;
+        }
+
+        // 🔹 Reset saved PlayerPrefs
+        PlayerPrefs.SetInt("BestMin", 0);
+        PlayerPrefs.SetInt("BestSec", 0);
+        PlayerPrefs.SetFloat("BestMilli", 0f);
+        PlayerPrefs.Save();
     }
 
     private void DisplayScores()
@@ -168,9 +204,17 @@ public class HighScoreTable : MonoBehaviour
     {
         string minStr = (min < 10) ? "0" + min : min.ToString();
         string secStr = (sec < 10) ? "0" + sec : sec.ToString();
-        string milliStr = milli.ToString("00");
+        string milliStr = milli.ToString("0");
 
         return $"{minStr}:{secStr}.{milliStr}";
+    }
+
+    public ScoreEntry GetBestScore()
+    {
+        if (highScores == null || highScores.Count == 0)
+            return null;
+
+        return highScores[0];
     }
 
 }
