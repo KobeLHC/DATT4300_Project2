@@ -39,9 +39,9 @@ public class SceneTransferData : MonoBehaviour
 
     public void SetBestRecord(int min, int sec, float milli)
     {
-        scoreBestMin = min;
-        scoreBestSec = sec;
-        scoreBestMilli = milli;
+        //scoreBestMin = min;
+        //scoreBestSec = sec;
+        //scoreBestMilli = milli;
 
         PlayerPrefs.SetInt("BestMin", min);
         PlayerPrefs.SetInt("BestSec", sec);

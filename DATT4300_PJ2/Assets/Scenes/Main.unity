@@ -30460,6 +30460,7 @@ GameObject:
   - component: {fileID: 4395670995900482742}
   - component: {fileID: 3836225890573779203}
   - component: {fileID: 8870496363376113085}
+  - component: {fileID: 8870496363376113086}
   m_Layer: 0
   m_Name: Car
   m_TagString: Untagged
@@ -30532,6 +30533,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8870496363376113086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2664813230598547662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f09e5ead0d9f4dbb9423b0266b01718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Car1: {fileID: 6634266124539207488, guid: 571c03066c50a4fdb97f2b6a590cde78, type: 3}
+  Car2: {fileID: 388786139005159992, guid: 8f7736f27fd7b49b3bb5417c88239121, type: 3}
+  Car3: {fileID: -3990860787448600509, guid: f72d4d4f95f5048c195101277a9547e4, type: 3}
+  Car4: {fileID: -8737463617546517244, guid: d644dece0248b4f81b34fe10fc09d2c6, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
