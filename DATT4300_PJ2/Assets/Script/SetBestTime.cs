@@ -11,23 +11,10 @@ public class SetBestTime : MonoBehaviour
 
     void Awake()
     {
-        int min = 0;
-        int sec = 0;
-        float milli = 0;
+        int min = PlayerPrefs.GetInt("BestMin", 0);
+        int sec = PlayerPrefs.GetInt("BestSec", 0);
+        float milli = PlayerPrefs.GetFloat("BestMilli", 0f);
 
-        if (SceneTransferData.instance != null)
-        {
-            min = SceneTransferData.instance.scoreBestMin;
-            sec = SceneTransferData.instance.scoreBestSec;
-            milli = SceneTransferData.instance.scoreBestMilli;
-        }
-        else if (PlayerPrefs.HasKey("BestMin"))
-        {
-            min = PlayerPrefs.GetInt("BestMin");
-            sec = PlayerPrefs.GetInt("BestSec");
-            milli = PlayerPrefs.GetFloat("BestMilli");
-        }
-       
         string minStr = (min < 10) ? "0" + min : min.ToString();
         string secStr = (sec < 10) ? "0" + sec : sec.ToString();
         string milliStr = milli.ToString("0");

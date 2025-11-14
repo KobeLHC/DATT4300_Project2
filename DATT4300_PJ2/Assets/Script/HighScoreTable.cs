@@ -10,6 +10,7 @@ public class HighScoreTable : MonoBehaviour
     public Transform entryContainer;
     public Transform entryTemplate;
     private float templateHeight = 75f;
+    public static HighScoreTable instance;
 
     //public TextMeshProUGUI pos;
     //public TextMeshProUGUI time;
@@ -28,7 +29,8 @@ public class HighScoreTable : MonoBehaviour
 
     private void Awake()
     {
-       
+        instance = this;
+
         LoadScores();
 
         if (SceneTransferData.instance != null)
@@ -45,10 +47,6 @@ public class HighScoreTable : MonoBehaviour
 
     }
 
-    private void Start()
-    {
-        ExportBestScore();
-    }
 
     private void Update()
     {
@@ -64,13 +62,30 @@ public class HighScoreTable : MonoBehaviour
         }
     }
 
-    private void ExportBestScore()
+    public void ExportBestScore()
     {
-        if (highScores.Count == 0 || SceneTransferData.instance == null) return;
-
         var best = GetBestScore();
 
-        SceneTransferData.instance.SetBestRecord(best.min, best.sec, best.milli);
+        if (best == null)
+        {
+            Debug.LogWarning("No best score to export");
+            return;
+        }
+
+        if (SceneTransferData.instance != null)
+        {
+            SceneTransferData.instance.SetBestRecord(best.min, best.sec, best.milli);
+        }
+
+        else
+        {
+            Debug.LogWarning("SceneTransferData.instance is null! Creating a new one.");
+
+            // Create a new GameObject with SceneTransferData
+            GameObject go = new GameObject("SceneTransferData");
+            SceneTransferData newData = go.AddComponent<SceneTransferData>();
+            newData.SetBestRecord(best.min, best.sec, best.milli);
+        }
 
         PlayerPrefs.SetInt("BestMin", best.min);
         PlayerPrefs.SetInt("BestSec", best.sec);
@@ -98,6 +113,9 @@ public class HighScoreTable : MonoBehaviour
             //First time load page
             ResetScores();
         }
+
+        //if (highScores.Count > 0)
+        //    ExportBestScore();
     }
 
     [System.Serializable]

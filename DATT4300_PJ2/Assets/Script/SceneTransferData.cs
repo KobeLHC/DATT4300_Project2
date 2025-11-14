@@ -5,6 +5,7 @@ using UnityEngine;
 public class SceneTransferData : MonoBehaviour
 {
     public static SceneTransferData instance;
+
     public int bestMin;
     public int bestSec;
     public float bestMilli;
@@ -39,9 +40,9 @@ public class SceneTransferData : MonoBehaviour
 
     public void SetBestRecord(int min, int sec, float milli)
     {
-        //scoreBestMin = min;
-        //scoreBestSec = sec;
-        //scoreBestMilli = milli;
+        scoreBestMin = min;
+        scoreBestSec = sec;
+        scoreBestMilli = milli;
 
         PlayerPrefs.SetInt("BestMin", min);
         PlayerPrefs.SetInt("BestSec", sec);
