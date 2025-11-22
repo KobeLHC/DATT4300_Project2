@@ -45,6 +45,35 @@ public class CarController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.centerOfMass = new Vector3(0, -0.5f, 0);
 
+  // car choice set stats
+        int choice = PlayerPrefs.GetInt("CarChoice", 1); // default to car 1 if not set
+
+        switch (choice)
+        {
+            case 1:
+                acceleration = 25f;
+                maxSpeed = 30f;
+                turnSpeed = 90f;
+                break;
+
+            case 2:
+                acceleration = 20f;
+                maxSpeed = 50f;
+                turnSpeed = 75f;
+                break;
+
+            case 3:
+                acceleration = 20f;
+                maxSpeed = 20f;
+                turnSpeed = 100f;
+                break;
+
+            case 4:
+                acceleration = 20f;
+                maxSpeed = 40f;
+                turnSpeed = 80f;
+                break;
+        }
         audioSource = GetComponent<AudioSource>();
         audioSource.loop = true;
         audioSource.clip = engineIdleClip;
@@ -53,26 +82,37 @@ public class CarController : MonoBehaviour
     }
 
     void Update()
-    {
-        // Forward / backward
-        if (Input.GetKey(KeyCode.W))
-            moveInput = 1f;
-        else if (Input.GetKey(KeyCode.K))
-            moveInput = -1f;
-        else
-            moveInput = 0f;
+{
+    // Forward / backward
+    if (Input.GetKey(KeyCode.W))
+        moveInput = 1f;
+    else if (Input.GetKey(KeyCode.K))
+        moveInput = -1f;
+    else
+        moveInput = 0f;
 
-        // Turn left / right
+    // gets current speed
+    Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+    float kph = flatVel.magnitude * 3.6f;
+
+    // only turns if above
+    if (kph > 1f)
+    {
         if (Input.GetKey(KeyCode.A))
             turnInput = -1f;
         else if (Input.GetKey(KeyCode.L))
             turnInput = 1f;
         else
             turnInput = 0f;
-
-        HandleEngineAudio();
-        UpdateSpeedometer();
     }
+    else
+    {
+        turnInput = 0f; // too slow to steer
+    }
+
+    HandleEngineAudio();
+    UpdateSpeedometer();
+}
 
     void UpdateSpeedometer()
     {
