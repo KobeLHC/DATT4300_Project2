@@ -54,7 +54,7 @@ private float currentKph;
         switch (choice)
         {
             case 1:
-                acceleration = 25f;
+                acceleration = 20f;
                 maxSpeed = 30f;
                 turnSpeed = 90f;
                 break;
