@@ -99,6 +99,16 @@ private float currentKph;
     float kph = flatVel.magnitude * 3.6f;
     currentKph = flatVel.magnitude * 3.6f;
 
+    CameraShake camShake = FindObjectOfType<CameraShake>();
+
+if (camShake != null)
+{
+    if (kph >= 30f)
+        camShake.StartShake();
+    else
+        camShake.StopShake();
+}
+
     // only turns if above
     if (kph > 1f)
     {

@@ -2,27 +2,47 @@ using UnityEngine;
 
 public class CarCamera : MonoBehaviour
 {
-    public Transform target;              // the car
-    public Vector3 offset = new Vector3(0, 3, -8); // height & distance behind
-    public float followSpeed = 5f; // follow speed
-    public float rotationSpeed = 5f; // rotation speed
-    public float forwardTilt = 10f;      // pitch forward
+    public Transform target;
+    public Vector3 offset = new Vector3(0, 3, -8);
+    public float followSpeed = 5f;
+    public float rotationSpeed = 5f;
+    public float forwardTilt = 10f;
+
+    [Header("Speed Shake")]
+    public float shakeStartKph = 40f;
+    public float maxShakeKph = 80f;
+    public float maxShakeIntensity = 0.08f;
 
     void LateUpdate()
     {
         if (target == null) return;
 
-        // Smooth follow
+        Rigidbody rb = target.GetComponent<Rigidbody>();
+        float kph = rb ? rb.velocity.magnitude * 3.6f : 0f;
+
         Vector3 desiredPos = target.position + target.TransformDirection(offset);
-        transform.position = Vector3.Lerp(transform.position, desiredPos, followSpeed * Time.deltaTime);
 
-        // Smooth rotation
-        Vector3 lookDir = target.forward;
-        Quaternion desiredRot = Quaternion.LookRotation(lookDir);
+        if (kph >= shakeStartKph)
+        {
+            float t = Mathf.InverseLerp(shakeStartKph, maxShakeKph, kph);
+            float intensity = Mathf.Lerp(0f, maxShakeIntensity, t);
 
-        // Apply pitch forward
+            desiredPos += Random.insideUnitSphere * intensity;
+        }
+
+        transform.position = Vector3.Lerp(
+            transform.position,
+            desiredPos,
+            followSpeed * Time.deltaTime
+        );
+
+        Quaternion desiredRot = Quaternion.LookRotation(target.forward);
         desiredRot *= Quaternion.Euler(forwardTilt, 0, 0);
 
-        transform.rotation = Quaternion.Slerp(transform.rotation, desiredRot, rotationSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.Slerp(
+            transform.rotation,
+            desiredRot,
+            rotationSpeed * Time.deltaTime
+        );
     }
 }
