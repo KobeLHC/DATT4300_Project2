@@ -52,7 +52,7 @@ Material:
     - _Mode: 2
     - _SrcBlend: 1
     - _ZWrite: 1
-    - alphaCutoff: 0.5
+    - alphaCutoff: 0.435
     - baseColorTexture_texCoord: 0
     - emissiveTexture_texCoord: 0
     - metallicFactor: 0

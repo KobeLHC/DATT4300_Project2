@@ -7,6 +7,9 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(AudioSource))]
 public class CarController : MonoBehaviour
 {
+private float currentKph;
+
+
     [Header("References")]
     public Transform carModel; // the visible car mesh
 
@@ -94,6 +97,7 @@ public class CarController : MonoBehaviour
     // gets current speed
     Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
     float kph = flatVel.magnitude * 3.6f;
+    currentKph = flatVel.magnitude * 3.6f;
 
     // only turns if above
     if (kph > 1f)
@@ -198,28 +202,32 @@ public class CarController : MonoBehaviour
     }
 
     void OnCollisionEnter(Collision collision)
+{
+    if (!collision.gameObject.CompareTag("Building"))
+        return;
+
+    // only crash if speed is over 35 kph
+    if (currentKph <= 30f)
+        return;
+
+    StartCoroutine(crashCountDown());
+
+    if (explosionParticle) explosionParticle.Play();
+    if (explosionAudio) explosionAudio.Play();
+    loseText.SetActive(true);
+
+    // Hide car mesh
+    Transform carChild = transform.Find("Car");
+    if (carChild != null) carChild.gameObject.SetActive(false);
+
+    // Make car immobile
+    if (rb != null)
     {
-        if (collision.gameObject.CompareTag("Building"))
-        {
-            StartCoroutine(crashCountDown());
-
-            if (explosionParticle) explosionParticle.Play();
-            if (explosionAudio) explosionAudio.Play();
-            loseText.SetActive(true);
-
-            // Hide car mesh
-            Transform carChild = transform.Find("Car");
-            if (carChild != null) carChild.gameObject.SetActive(false);
-
-            // Make car immobile
-            if (rb != null)
-            {
-                rb.velocity = Vector3.zero;
-                rb.angularVelocity = Vector3.zero;
-                rb.isKinematic = true;
-            }
-        }
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+        rb.isKinematic = true;
     }
+}
 
     IEnumerator crashCountDown()
     {

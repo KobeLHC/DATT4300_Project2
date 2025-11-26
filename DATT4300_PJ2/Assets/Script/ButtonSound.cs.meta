@@ -3,7 +3,9 @@ guid: 0675df30a3bc6d148ae5f7c1175c734f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - hoverSound: {fileID: 8300000, guid: 1cc37ee9cbf7da14795c656b9c0e1a36, type: 3}
+  - clickSound: {fileID: 8300000, guid: 0008558c4fab1d14bab5d009985d5d83, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
