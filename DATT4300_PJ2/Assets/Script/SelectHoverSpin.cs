@@ -10,6 +10,12 @@ public class SelectHoverSpin : MonoBehaviour, IPointerEnterHandler, IPointerExit
     [TextArea]
     public string description; // text for THIS car
     public TextMeshProUGUI descriptionText; // UI text object
+    public GameObject panel;
+
+    private void Start()
+    {
+        panel.SetActive(false);
+    }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -19,6 +25,7 @@ public class SelectHoverSpin : MonoBehaviour, IPointerEnterHandler, IPointerExit
         {
             descriptionText.text = description;
             descriptionText.gameObject.SetActive(true);
+            panel.SetActive(true);
         }
     }
 
@@ -29,6 +36,7 @@ public class SelectHoverSpin : MonoBehaviour, IPointerEnterHandler, IPointerExit
         if (descriptionText != null)
         {
             descriptionText.gameObject.SetActive(false);
+            panel.SetActive(false);
         }
     }
 
