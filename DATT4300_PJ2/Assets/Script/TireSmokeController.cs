@@ -3,8 +3,8 @@ using UnityEngine;
 public class TireSmokeController : MonoBehaviour
 {
     public ParticleSystem tireSmoke;
-    public float speedThreshold = 30f;      // must be moving fast
-    public float driftAngleThreshold = 35f; // how sideways before smoke
+    public float speedThreshold = 20f;      // must be moving fast
+    public float driftAngleThreshold = 18f; // how sideways before smoke
 
     private Rigidbody rb;
     private ParticleSystem.EmissionModule emission;
