@@ -346,7 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9822dbe28d317fe48ab0c77e38bcde0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spinSpeed: 300
+  spinSpeed: 100
 --- !u!1 &540689374 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1434673747024882500, guid: f72d4d4f95f5048c195101277a9547e4, type: 3}
@@ -364,7 +364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9822dbe28d317fe48ab0c77e38bcde0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spinSpeed: 300
+  spinSpeed: 100
 --- !u!1 &552036049
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,7 +1273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9822dbe28d317fe48ab0c77e38bcde0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spinSpeed: 300
+  spinSpeed: 100
 --- !u!1 &1459469981
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,7 +1469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9822dbe28d317fe48ab0c77e38bcde0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spinSpeed: 300
+  spinSpeed: 100
 --- !u!1 &1658922179
 GameObject:
   m_ObjectHideFlags: 0
