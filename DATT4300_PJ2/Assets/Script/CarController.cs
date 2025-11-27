@@ -175,6 +175,9 @@ if (camShake != null)
             Quaternion targetRot = Quaternion.LookRotation(vel.normalized, Vector3.up);
             carModel.rotation = Quaternion.Slerp(carModel.rotation, targetRot, 10f * Time.deltaTime);
         }
+// it keeps the car upright
+Quaternion uprightRotation = Quaternion.FromToRotation(transform.up, Vector3.up) * rb.rotation;
+rb.MoveRotation(Quaternion.Slerp(rb.rotation, uprightRotation, 5f * Time.fixedDeltaTime));
     }
 
     void CheckGround()
@@ -217,7 +220,7 @@ if (camShake != null)
         return;
 
     // only crash if speed is over 35 kph
-    if (currentKph <= 30f)
+    if (currentKph <= 25f)
         return;
 
     StartCoroutine(crashCountDown());

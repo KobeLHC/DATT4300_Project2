@@ -3,35 +3,56 @@ using UnityEngine;
 public class TireSmokeController : MonoBehaviour
 {
     public ParticleSystem tireSmoke;
-    public float speedThreshold = 20f;      // must be moving fast
-    public float driftAngleThreshold = 18f; // how sideways before smoke
+    public float speedThreshold = 20f;
+    public float driftAngleThreshold = 18f;
+
+    [Header("Drift Sound")]
+    public AudioSource driftAudio;  
+    public AudioClip driftClip;
+    public float volume = 1f;
 
     private Rigidbody rb;
     private ParticleSystem.EmissionModule emission;
+    private bool isDrifting = false;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         emission = tireSmoke.emission;
-        emission.rateOverTime = 0f; // start off
+        emission.rateOverTime = 0f;
+        
+
+        if (driftAudio != null)
+        {
+            driftAudio.loop = false;     
+            driftAudio.playOnAwake = false;
+        }
     }
 
     void Update()
     {
-        // get speed in kph
         float kph = rb.velocity.magnitude * 3.6f;
-
-        // get drift angle
         float angle = Vector3.Angle(transform.forward, rb.velocity);
 
-        // drifting = moving fast + sliding sideways
-        if (kph >= speedThreshold && angle >= driftAngleThreshold)
+        bool driftingNow = (kph >= speedThreshold && angle >= driftAngleThreshold);
+
+     
+        if (driftingNow && !isDrifting)
         {
-            emission.rateOverTime = 40f; // smoke ON
+            emission.rateOverTime = 40f;
+
+            if (driftAudio && driftClip)
+                driftAudio.PlayOneShot(driftClip, volume);
         }
-        else
+
+        else if (!driftingNow && isDrifting)
         {
-            emission.rateOverTime = 0f; // smoke OFF
+            emission.rateOverTime = 0f;
+
+            if (driftAudio && driftAudio.isPlaying)
+                driftAudio.Stop(); 
         }
+
+        isDrifting = driftingNow;
     }
 }
