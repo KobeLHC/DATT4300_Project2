@@ -84,49 +84,46 @@ private float currentKph;
         loseText.SetActive(false);
     }
 
-    void Update()
+   void Update()
 {
-    // Forward / backward
-    if (Input.GetKey(KeyCode.W))
+    // move input 
+    bool forward = Input.GetKey(KeyCode.W);
+    bool backward = Input.GetKey(KeyCode.K);
+
+    if (forward && !backward)
         moveInput = 1f;
-    else if (Input.GetKey(KeyCode.K))
+    else if (backward && !forward)
         moveInput = -1f;
     else
         moveInput = 0f;
 
-    // gets current speed
     Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
     float kph = flatVel.magnitude * 3.6f;
-    currentKph = flatVel.magnitude * 3.6f;
+    currentKph = kph;
 
-    CameraShake camShake = FindObjectOfType<CameraShake>();
+    bool burnoutIdle = forward && backward && kph < 1f;
 
-if (camShake != null)
-{
-    if (kph >= 30f)
-        camShake.StartShake();
-    else
-        camShake.StopShake();
-}
+    bool left = Input.GetKey(KeyCode.A);
+    bool right = Input.GetKey(KeyCode.L);
 
-    // only turns if above
-    if (kph > 1f)
+    if (kph > 1f || burnoutIdle)
     {
-        if (Input.GetKey(KeyCode.A))
+        if (left && !right)
             turnInput = -1f;
-        else if (Input.GetKey(KeyCode.L))
+        else if (right && !left)
             turnInput = 1f;
         else
             turnInput = 0f;
     }
     else
     {
-        turnInput = 0f; // too slow to steer
+        turnInput = 0f;
     }
 
     HandleEngineAudio();
     UpdateSpeedometer();
 }
+
 
     void UpdateSpeedometer()
     {

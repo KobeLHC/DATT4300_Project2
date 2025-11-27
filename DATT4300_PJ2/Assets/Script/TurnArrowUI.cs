@@ -9,7 +9,6 @@ public class TurnArrowUI : MonoBehaviour
 
     void Start()
     {
-        // hide all at start
         leftArrow.SetActive(false);
         rightArrow.SetActive(false);
         upArrow.SetActive(false);
@@ -23,12 +22,9 @@ public class TurnArrowUI : MonoBehaviour
         bool movingForward = Input.GetKey(KeyCode.W);
         bool movingBackward = Input.GetKey(KeyCode.K);
 
-        // left / right
-        leftArrow.SetActive(turningLeft && !turningRight);
-        rightArrow.SetActive(turningRight && !turningLeft);
-
-        // up / down
-        upArrow.SetActive(movingForward && !movingBackward);
-        downArrow.SetActive(movingBackward && !movingForward);
+        leftArrow.SetActive(turningLeft);
+        rightArrow.SetActive(turningRight);
+        upArrow.SetActive(movingForward);
+        downArrow.SetActive(movingBackward);
     }
 }

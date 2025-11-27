@@ -13,6 +13,12 @@ public class CarCamera : MonoBehaviour
     public float maxShakeKph = 80f;
     public float maxShakeIntensity = 0.08f;
 
+    [Header("Burnout Shake")]
+public float burnoutShakeIntensity = 0.12f;
+public float burnoutShakeTime = 0.3f;
+
+private float burnoutShakeTimer = 0f;
+
     void LateUpdate()
     {
         if (target == null) return;
@@ -30,6 +36,13 @@ public class CarCamera : MonoBehaviour
             desiredPos += Random.insideUnitSphere * intensity;
         }
 
+          // burnout shake
+        if (burnoutShakeTimer > 0f)
+        {
+            desiredPos += Random.insideUnitSphere * burnoutShakeIntensity;
+            burnoutShakeTimer -= Time.deltaTime;
+        }
+
         transform.position = Vector3.Lerp(
             transform.position,
             desiredPos,
@@ -45,4 +58,9 @@ public class CarCamera : MonoBehaviour
             rotationSpeed * Time.deltaTime
         );
     }
+    public void TriggerBurnoutShake()
+{
+    burnoutShakeTimer = burnoutShakeTime;
+}
+
 }
