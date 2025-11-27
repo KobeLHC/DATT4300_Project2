@@ -9,6 +9,8 @@ public class CountDown : MonoBehaviour
     public GameObject lapTimer;
     public GameObject car;
 
+
+
         private Rigidbody rb;
 
 
@@ -53,6 +55,7 @@ public class CountDown : MonoBehaviour
 
         goSfx.Play();
         lapTimer.SetActive(true);
+
                 rb.isKinematic = false;
 
 

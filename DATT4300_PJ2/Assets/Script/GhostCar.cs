@@ -30,7 +30,6 @@ public class GhostCar : MonoBehaviour
         playbackTimer = 0f;
         playing = true;
         gameObject.SetActive(true);
-        Debug.Log("👻 Ghost playback started");
     }
 
     void Update()
@@ -51,3 +50,4 @@ public class GhostCar : MonoBehaviour
         playbackTimer += Time.deltaTime;
     }
 }
+
