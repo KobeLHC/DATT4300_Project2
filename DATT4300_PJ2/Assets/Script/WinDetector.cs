@@ -29,10 +29,8 @@ public class WinDetector : MonoBehaviour
         lapCountDisplay.GetComponent<TextMeshProUGUI>().text = lapCount + "/1";
     }
 
-
     private void OnTriggerEnter(Collider other)
     {
-
         if (other.CompareTag("MidObject"))
         {
             winLine.SetActive(true);
@@ -46,55 +44,62 @@ public class WinDetector : MonoBehaviour
 
             lapCount += 1;
 
-            //best time
+            // 🔹 TRACK IF THIS IS A NEW BEST LAP
+            bool isNewBest = false;
 
-            if(LapTimeManager.minCount < compareMin || compareMin == 0)
+            // ---------------- MINUTES ----------------
+            if (LapTimeManager.minCount < compareMin || compareMin == 0)
             {
-                if (LapTimeManager.minCount <= 9)
-                {
-                    bestMinDisplay.GetComponent<TextMeshProUGUI>().text = "0" + LapTimeManager.minCount + ":";
-                }
-                else
-                {
-                    bestMinDisplay.GetComponent<TextMeshProUGUI>().text = "" + LapTimeManager.minCount + ":";
-                }
-
                 compareMin = LapTimeManager.minCount;
-                //compareSec = LapTimeManager.secCount;
-                //compareMilli = LapTimeManager.milliCount;
-            }
+                isNewBest = true;
 
-            if(LapTimeManager.secCount < compareSec || compareSec == 0 && LapTimeManager.minCount == compareMin)
-            {
-                if (LapTimeManager.secCount <= 9)
-                {
-                    bestSecDisplay.GetComponent<TextMeshProUGUI>().text = "0" + LapTimeManager.secCount + ".";
-                }
-
+                if (LapTimeManager.minCount <= 9)
+                    bestMinDisplay.GetComponent<TextMeshProUGUI>().text = "0" + LapTimeManager.minCount + ":";
                 else
-                {
-                    bestSecDisplay.GetComponent<TextMeshProUGUI>().text = "" + LapTimeManager.secCount + ".";
-                }
-
-                //compareMin = LapTimeManager.minCount;
-                compareSec = LapTimeManager.secCount;
-                //compareMilli = LapTimeManager.milliCount;
+                    bestMinDisplay.GetComponent<TextMeshProUGUI>().text = LapTimeManager.minCount + ":";
             }
 
-            if(LapTimeManager.milliCount< compareMilli || compareMilli == 0f || LapTimeManager.secCount == compareSec || LapTimeManager.minCount == compareMin)
+            // ---------------- SECONDS ----------------
+            if ((LapTimeManager.secCount < compareSec || compareSec == 0)
+                && LapTimeManager.minCount == compareMin)
             {
-                bestMilliDisplay.GetComponent<TextMeshProUGUI>().text = "" + ((int)LapTimeManager.milliCount);
-                //compareMin = LapTimeManager.minCount;
-                //compareSec = LapTimeManager.secCount;
-                compareMilli = LapTimeManager.milliCount;
+                compareSec = LapTimeManager.secCount;
+                isNewBest = true;
+
+                if (LapTimeManager.secCount <= 9)
+                    bestSecDisplay.GetComponent<TextMeshProUGUI>().text = "0" + LapTimeManager.secCount + ".";
+                else
+                    bestSecDisplay.GetComponent<TextMeshProUGUI>().text = LapTimeManager.secCount + ".";
             }
-                
-            
+
+            // ---------------- MILLISECONDS ----------------
+            if (LapTimeManager.milliCount < compareMilli || compareMilli == 0f)
+            {
+                compareMilli = LapTimeManager.milliCount;
+                isNewBest = true;
+
+                bestMilliDisplay.GetComponent<TextMeshProUGUI>().text =
+                    ((int)LapTimeManager.milliCount).ToString();
+            }
+
+            // ⭐ SAVE GHOST IF NEW BEST TIME
+            if (isNewBest)
+            {
+                GhostRecorder rec = FindObjectOfType<GhostRecorder>();
+                if (rec != null)
+                {
+                    rec.StopRecording();
+                    rec.SaveAsBest();
+                }
+            }
+
+            // Reset timer for next lap
             LapTimeManager.minCount = 0;
             LapTimeManager.secCount = 0;
             LapTimeManager.milliCount = 0;
 
-            if(lapCount > 1)
+            // If finished → go to score screen
+            if (lapCount > 1)
             {
                 if (SceneTransferData.instance != null)
                 {

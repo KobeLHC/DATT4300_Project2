@@ -219,6 +219,8 @@ rb.MoveRotation(Quaternion.Slerp(rb.rotation, uprightRotation, 5f * Time.fixedDe
     // only crash if speed is over 35 kph
     if (currentKph <= 25f)
         return;
+  // saving last attempt
+
 
     StartCoroutine(crashCountDown());
 
@@ -245,4 +247,7 @@ rb.MoveRotation(Quaternion.Slerp(rb.rotation, uprightRotation, 5f * Time.fixedDe
         loseText.SetActive(false);
         SceneManager.LoadScene("Start");
     }
+
+
+
 }
