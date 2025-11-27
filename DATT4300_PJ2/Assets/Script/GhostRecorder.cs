@@ -12,6 +12,11 @@ public class GhostRecorder : MonoBehaviour
     private List<Vector3> positions = new List<Vector3>();
     private List<Quaternion> rotations = new List<Quaternion>();
 
+    void Start()
+    {
+        ResetRecording();
+    }
+
     void Update()
     {
         if (!isRecording) return;
@@ -39,6 +44,7 @@ public class GhostRecorder : MonoBehaviour
         isRecording = false;
     }
 
+    // Call this ONLY when this lap is a NEW BEST time
     public void SaveAsBest()
     {
         if (positions.Count == 0)
@@ -52,5 +58,7 @@ public class GhostRecorder : MonoBehaviour
         GhostData.interval = recordInterval;
 
         Debug.Log("⭐ NEW BEST GHOST SAVED (" + positions.Count + " frames)");
+
+        GhostSaveSystem.SaveGhost();
     }
 }

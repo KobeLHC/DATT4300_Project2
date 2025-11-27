@@ -7,8 +7,10 @@ public class GhostCar : MonoBehaviour
 
     void Start()
     {
-        // No ghost yet? Hide.
-        if (GhostData.bestPositions == null)
+        // Load saved ghost from disk when game starts
+        bool loaded = GhostSaveSystem.LoadGhost();
+
+        if (!loaded || GhostData.bestPositions == null || GhostData.bestPositions.Count == 0)
         {
             gameObject.SetActive(false);
             return;
@@ -25,10 +27,10 @@ public class GhostCar : MonoBehaviour
             return;
         }
 
-        Debug.Log("👻 Ghost playback started");
         playbackTimer = 0f;
         playing = true;
         gameObject.SetActive(true);
+        Debug.Log("👻 Ghost playback started");
     }
 
     void Update()
@@ -40,8 +42,7 @@ public class GhostCar : MonoBehaviour
         if (index >= GhostData.bestPositions.Count)
         {
             playing = false;
-            gameObject.SetActive(false);
-            return;
+            return; // finished path, just stop moving
         }
 
         transform.position = GhostData.bestPositions[index];

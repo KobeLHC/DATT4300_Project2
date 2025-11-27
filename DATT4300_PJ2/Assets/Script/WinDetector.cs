@@ -44,7 +44,6 @@ public class WinDetector : MonoBehaviour
 
             lapCount += 1;
 
-            // 🔹 TRACK IF THIS IS A NEW BEST LAP
             bool isNewBest = false;
 
             // ---------------- MINUTES ----------------
@@ -82,13 +81,15 @@ public class WinDetector : MonoBehaviour
                     ((int)LapTimeManager.milliCount).ToString();
             }
 
-            // ⭐ SAVE GHOST IF NEW BEST TIME
-            if (isNewBest)
+            // 🔹 ALWAYS stop recording at finish
+            GhostRecorder rec = FindObjectOfType<GhostRecorder>();
+            if (rec != null)
             {
-                GhostRecorder rec = FindObjectOfType<GhostRecorder>();
-                if (rec != null)
+                rec.StopRecording();
+
+                // ⭐ SAVE GHOST IF NEW BEST TIME
+                if (isNewBest)
                 {
-                    rec.StopRecording();
                     rec.SaveAsBest();
                 }
             }
