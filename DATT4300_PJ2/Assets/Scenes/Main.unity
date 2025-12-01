@@ -15199,7 +15199,6 @@ GameObject:
   m_Component:
   - component: {fileID: 297973816}
   - component: {fileID: 297973813}
-  - component: {fileID: 297973817}
   - component: {fileID: 297973818}
   m_Layer: 0
   m_Name: GhostCar
@@ -15321,18 +15320,6 @@ Transform:
   - {fileID: 860219860}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &297973817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 297973810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba38a57cc16b1864a8e264751e3ec780, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &297973818
 MonoBehaviour:
   m_ObjectHideFlags: 0

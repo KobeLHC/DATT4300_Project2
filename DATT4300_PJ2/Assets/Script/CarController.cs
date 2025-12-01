@@ -216,7 +216,7 @@ rb.MoveRotation(Quaternion.Slerp(rb.rotation, uprightRotation, 5f * Time.fixedDe
     if (!collision.gameObject.CompareTag("Building"))
         return;
 
-    // only crash if speed is over 35 kph
+    // only crash if speed is over 25 kph
     if (currentKph <= 25f)
         return;
   // saving last attempt
